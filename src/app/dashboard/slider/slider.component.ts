@@ -38,12 +38,12 @@ export class SliderComponent {
     {
       title: 'Building',
       description: 'Building description...',
-      url: 'assets/images/slider2.png',
+      url: 'assets/images/slider2.jpg',
     },
     {
       title: 'Glass over a computer',
       description: 'Description of a glass over a computer',
-      url: 'assets/images/slider3.png',
+      url: 'assets/images/slider3.jpg',
     },
   ];
 
