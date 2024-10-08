@@ -1,0 +1,13 @@
+<h2 class="cybr-btn">
+  PARTNERS<span aria-hidden>_</span>
+  <span aria-hidden class="cybr-btn__glitch">PARTNERS_</span>
+</h2>
+<div class="container">
+  <div class="partners-container">
+    @for (item of items; track $index) {
+    <a [href]="item.linkUrl" target="_blank">
+      <img [src]="item.imgSrc" alt="" />
+    </a>
+    }
+  </div>
+</div>

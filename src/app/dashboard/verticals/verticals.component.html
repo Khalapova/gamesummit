@@ -1,0 +1,36 @@
+<h2 class="cybr-btn">
+  VERTICALS<span aria-hidden>_</span>
+  <span aria-hidden class="cybr-btn__glitch">VERTICALS_</span>
+</h2>
+<div class="container">
+  <div class="verticals-container">
+    <div class="info-container">
+      <div class="info-text">
+        <h3>{{ currentVertical().title }}</h3>
+        <p>
+          {{ currentVertical().text }}
+        </p>
+      </div>
+      <div class="active-image-container">
+        <img
+          class="active-image"
+          [src]="currentVertical().imgUrl"
+          [alt]="currentVertical().title"
+        />
+      </div>
+    </div>
+
+    <swiper-container #swiper class="swiper-wrapper" init="false">
+      @for (item of contents; track item.imgUrl; let i = $index) {
+      <swiper-slide class="swiper-slide">
+        <img
+          [src]="item.thumbmailUrl"
+          alt=""
+          class="slider-image"
+          (click)="selectSlide(i)"
+        />
+      </swiper-slide>
+      }
+    </swiper-container>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+<header>
+  <div class="container header-panel">
+    <a routerLink="/" class="logo">
+      <img src="assets/images/logo.png" alt="logo" height="70px" />
+    </a>
+    <nav class="navbar">
+      <ul class="nav-list">
+        <li class="nav-item"><a routerLink="/about">ABOUT</a></li>
+        <li class="nav-item"><a routerLink="/events">EVENTS</a></li>
+        <li class="nav-item"><a routerLink="/team">TEAM</a></li>
+        <li class="nav-item"><a routerLink="/partners">MERCH</a></li>
+        <li class="nav-item"><a routerLink="/partners">PARTNERS</a></li>
+      </ul>
+    </nav>
+    <div class="dropdown" ngbDropdown>
+      <button
+        type="button"
+        class="btn lang-btn dropdown-button"
+        ngbDropdownToggle
+        id="lang"
+      >
+        {{ activeLang | uppercase }}
+      </button>
+      <div class="dropdown-content" ngbDropdownMenu aria-labelledby="lang">
+        <button (click)="changeLang('en')" ngbDropdownItem>EN</button>
+        <button (click)="changeLang('az')" ngbDropdownItem>AZ</button>
+        <button (click)="changeLang('ru')" ngbDropdownItem>RU</button>
+      </div>
+    </div>
+  </div>
+</header>

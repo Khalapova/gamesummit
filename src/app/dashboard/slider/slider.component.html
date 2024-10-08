@@ -1,0 +1,13 @@
+<swiper-container
+  appSwiper
+  #swiper
+  class="wrapper"
+  [config]="swiperConfig"
+  (slidechange)="slideChange($event)"
+>
+  @for (item of contents; track $index) {
+  <swiper-slide class="swiper-slide">
+    <img [src]="item.url" alt="" />
+  </swiper-slide>
+  }
+</swiper-container>

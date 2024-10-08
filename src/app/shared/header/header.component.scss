@@ -1,0 +1,77 @@
+:host {
+  display: block;
+  z-index: 1;
+  position: relative;
+  margin-bottom: -150px;
+}
+
+header {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+.header-panel {
+  display: flex;
+  align-items: center;
+  padding-block: 30px;
+  gap: 20px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin-bottom: 0;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.logo {
+  margin-right: auto;
+}
+
+.navbar {
+  position: relative;
+  padding: 20px;
+}
+
+.nav-list {
+  list-style: none; /* Убираем маркеры у списка */
+  display: flex; /* Размещаем элементы списка в ряд */
+  justify-content: center; /* Центрируем элементы */
+}
+
+.nav-item {
+  margin: 0 15px; /* Отступы между пунктами меню */
+  position: relative; /* Для псевдоэлемента подчеркивания */
+  cursor: pointer; /* Курсор в виде указателя */
+  padding: 10px 0; /* Отступы для пункта меню */
+  transition: color 0.3s; /* Плавный переход цвета текста */
+}
+
+.underline {
+  position: absolute;
+  width: 100%;
+  height: 4px; /* Высота подчеркивающего элемента */
+  background-color: #48a1d9; /* Цвет подчеркивания */
+  bottom: 0; /* Положение подчеркивания */
+  left: 0;
+  transition: transform 0.3s; /* Плавный переход при изменении положения */
+  transform: scaleX(0); /* Начальное состояние (не видно) */
+}
+
+.nav-item:hover {
+  color: #d83b95; /* Цвет текста при наведении */
+}
+
+.nav-item:hover ~ .underline {
+  transform: scaleX(1); /* Подчеркивание становится видимым */
+}
+
+.lang-btn {
+  color: #ffffff;
+  background: #48a1d9;
+}

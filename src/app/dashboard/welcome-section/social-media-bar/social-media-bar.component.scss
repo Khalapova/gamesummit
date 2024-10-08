@@ -1,0 +1,10 @@
+.social-media-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  span {
+    writing-mode: tb-rl;
+    transform: rotate(-180deg);
+  }
+}

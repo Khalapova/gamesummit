@@ -1,0 +1,134 @@
+:host {
+  z-index: 2;
+}
+
+.timer {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.timer-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  span {
+    font-size: 40px;
+  }
+}
+
+.countdown span {
+  &:first-of-type {
+    font-size: 5rem;
+    line-height: 4rem;
+  }
+  &:last-of-type {
+    font-size: 2rem;
+  }
+}
+
+.countdown-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  position: relative;
+  padding: 20px;
+  background-color: rgba(27, 27, 27, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 0 15px #d83b95, 0 0 30px #48a1d9;
+  overflow: hidden;
+}
+
+.countdown-container::before,
+.countdown-container::after {
+  content: "";
+  position: absolute;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #d83b95, 0 0 30px #48a1d9;
+  z-index: -1;
+}
+
+.countdown-container::before {
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border-top: 2px solid #48a1d9;
+  border-left: 2px solid #48a1d9;
+}
+
+.countdown-container::after {
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border-bottom: 2px solid #d83b95;
+  border-right: 2px solid #d83b95;
+}
+
+.countdown {
+  padding: 20px;
+  margin: 10px;
+}
+
+.countdown-button {
+  position: relative;
+  display: inline-block;
+  padding: 15px 30px;
+  margin-top: 20px;
+  background-color: #d83b95;
+  color: #fff;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  border: 2px solid #48a1d9;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 0 10px #d83b95, 0 0 20px #48a1d9, 0 0 30px #d83b95;
+  transition: 0.4s ease-in-out;
+}
+
+.countdown-button:hover {
+  background-color: #48a1d9;
+  color: #d83b95;
+  box-shadow: 0 0 20px #48a1d9, 0 0 40px #d83b95, 0 0 60px #48a1d9;
+}
+
+.countdown-button::before,
+.countdown-button::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+.countdown-button::before {
+  top: -5px;
+  left: -5px;
+  border-top: 2px solid #48a1d9;
+  border-left: 2px solid #48a1d9;
+}
+
+.countdown-button::after {
+  bottom: -5px;
+  right: -5px;
+  border-bottom: 2px solid #d83b95;
+  border-right: 2px solid #d83b95;
+}
+
+.countdown-button:hover::before {
+  top: -10px;
+  left: -10px;
+}
+
+.countdown-button:hover::after {
+  bottom: -10px;
+  right: -10px;
+}

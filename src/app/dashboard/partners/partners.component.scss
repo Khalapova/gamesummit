@@ -1,0 +1,14 @@
+.partners-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    img {
+      max-height: 50px;
+      max-width: 150px;
+    }
+  }
+}
