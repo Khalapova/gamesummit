@@ -1,11 +1,17 @@
 <div class="videoWrapper">
-  <iframe
-    src="https://www.youtube.com/embed/3arN9exTaOs?si=3t5WJ7KwEBFCTo0G&amp;controls=0&showinfo=0&vq=hd1080&playlist=3arN9exTaOs&loop=1&mute=1&autoplay=1"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    referrerpolicy="strict-origin-when-cross-origin"
-    allowfullscreen
-  ></iframe>
+  <video
+    class="bgv"
+    autoplay
+    loop
+    [muted]="'muted'"
+    poster="assets/images/slider2.jpg"
+  >
+    <source
+      src="https://firebasestorage.googleapis.com/v0/b/gplus-dd092.appspot.com/o/summit5.mp4?alt=media&token=3f1fa6c2-9360-470b-a056-bbdd98159d34"
+      type="video/mp4"
+    />
+    Your browser does not support the video tag.
+  </video>
 </div>
 
 <div class="main-info">

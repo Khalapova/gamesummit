@@ -4,6 +4,7 @@
   "scripts": {
     "start": "ng serve -o",
     "build": "ng build",
+    "deploy": "ng deploy --base-href=/gamesummit/",
     "watch": "ng build --watch --configuration development"
   },
   "private": true,
